@@ -3,13 +3,9 @@ import css from './profile.module.css';
 
 const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-      <div className={css.profile}>
+    <div className={css.profile}>
       <div className={css.description}>
-        <img
-          className={css.avatar}
-          src = {avatar}
-          alt = {username}
-        />
+        <img className={css.avatar} src={avatar} alt={username} />
         <p className={css.name}>{username}</p>
         <p className={css.tag}>@{tag}</p>
         <p className={css.location}>{location}</p>
@@ -30,8 +26,8 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
@@ -39,7 +35,6 @@ Profile.propTypes = {
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.objectOf(PropTypes.number).isRequired,
-  
-}
+};
 
 export default Profile;
