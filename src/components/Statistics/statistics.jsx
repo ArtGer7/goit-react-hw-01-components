@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import css from './statistics.module.css';
 import getRandomHexColor from 'getRandomHexColor';
 
+
 const Statistics = ({ title, stats }) => {
   return (
     <section className={css.statistics}>
